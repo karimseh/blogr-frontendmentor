@@ -176,6 +176,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .__hero_actions{
     display: flex;
@@ -295,4 +296,106 @@ a{
     flex-direction: column;
     gap: 10px;
     color: var(--Grayish-blue);
+}
+.__grid_item ul li:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+.__hamburegr_menu{
+display: none;
+}
+@media only screen and (max-width: 1199px){
+
+    :root{
+        --maxWidth : 950px
+    }
+    .__img_wrapper img{
+        width: 380px;
+        height: 380px;
+     }
+}
+
+@media only screen and (max-width: 1000px){
+
+    .__navbar{
+        display: none;
+    }
+    .__Login_Signup{
+        display: none;
+    }
+    .__logo_nav {
+        width: 100%;
+        gap: 0;
+        align-items: center;
+        line-height: 0.5em;
+        justify-content: space-between;
+        }
+    .__hamburegr_menu{
+        display: block;
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    #hero-title{
+        font-weight: 500;
+        font-size: 42px;
+       
+    }
+    .__btn_white, .__btn_outline {
+        font-weight: 700;
+        padding: 12px 22px;
+    }
+    .__header_2 h1{
+        font-size: 28px;
+    }
+    .__section2_content, .__section4_content {
+        align-items: center;
+        margin-top: 301px;
+    }
+    .__section4_content{
+        margin-top: 150px;
+    }
+    .__article{
+        width: 90vw;
+        text-align: center;
+    }
+    .__section2{
+        background: url(assets/illustration-editor-mobile.svg) no-repeat center top 14%;
+    }
+    .__section3{
+        padding: 25px;
+    }
+
+    .__img_wrapper{
+        /* width: 100%; */
+        top: 9%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .__article_sec3{
+
+  
+    margin-top: 185px;
+
+   width: unset;
+   padding: unset;
+    text-align: center;
+    padding-bottom: 50px;
+    }
+ .__section4{
+    background: url(assets/illustration-laptop-mobile.svg) no-repeat center top;
+ }
+ .__footer_content {
+     flex-direction: column;
+     align-items: center;
+
+ }
+ .__grid_content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 70px;
+}
 }
