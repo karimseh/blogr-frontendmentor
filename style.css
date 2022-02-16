@@ -468,6 +468,9 @@ display: none;
     transition: transform .5s ease-in-out;
    
 }
+.__links li a:not(.__category_links_ul li a):hover::after {
+    transform: translateY(-50%) rotate(180deg);
+}
 
 .__category_links_ul li:hover {
     color: var(--Very-dark-grayish-blue);
