@@ -52,6 +52,7 @@ a{
     display: flex;
     gap: 55px;
     align-items: center;
+ 
 }
 .__links{
     display: flex;
@@ -74,11 +75,14 @@ a{
     background: url(assets/icon-arrow-light.svg) ;
     transition: transform .5s ease-in-out;
 }
+
 .__links  li:not(.__category_links_ul li):hover>a{
         text-decoration: underline;
         text-decoration-thickness: 2px;
+     
 }
 .__links li:not(.__category_links_ul li):hover::after{
+   
     transform: translateY(-50%) rotate(180deg);
 }
 .__category_links_ul{
@@ -316,7 +320,12 @@ display: none;
 }
 
 @media only screen and (max-width: 1000px){
-
+    body{
+        overflow-x: hidden;
+    }
+    button, a{
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
     .__navbar{
         display: none;
     }
@@ -336,12 +345,17 @@ display: none;
         outline: none;
         border: none;
         cursor: pointer;
+       
     }
+
 
     #hero-title{
         font-weight: 500;
-        font-size: 42px;
+        font-size: 32px;
        
+    }
+    #hero-title + p {
+        font-size: 16px;
     }
     .__btn_white, .__btn_outline {
         font-weight: 700;
@@ -349,6 +363,16 @@ display: none;
     }
     .__header_2 h1{
         font-size: 28px;
+    }
+    .__hero_intro{
+        padding-top: 6vh;
+    }
+    .__hero_content{
+        padding: 0 43px;
+        gap: 15px;
+    }
+    .__section1{
+        background: url(assets/bg-pattern-intro-mobile.svg) no-repeat left 38% top 37%, linear-gradient( var(--Very-light-red-2), var(--Light-red-2)) no-repeat;
     }
     .__section2_content, .__section4_content {
         align-items: center;
@@ -366,6 +390,8 @@ display: none;
     }
     .__section3{
         padding: 25px;
+        background: url(assets/bg-pattern-circles.svg) left 56% top -213px no-repeat, linear-gradient( var(--Very-dark-gray-blue), var(--Very-dark-desaturated-blue));
+        background-size: cover;
     }
 
     .__img_wrapper{
@@ -398,4 +424,102 @@ display: none;
     text-align: center;
     gap: 70px;
 }
+.__navbar{
+    display: none;
+    background: white;
+    color: var(--Very-dark-desaturated-blue);
+    position: absolute;
+    z-index: 100;
+    top: 145px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85vw;
+    justify-content: center;
+    padding: 40px 20px;
+    border-start-start-radius: 5px;
+    border-start-end-radius: 5px;
+}
+.__links{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 35px;
+
+}
+.__links li:not(.__category_links_ul li)::after{
+
+    background: none;
+   
+}
+.__links li a:not(.__category_links_ul li a){
+    position: relative;
+}
+.__links li a:not(.__category_links_ul li a)::after {
+
+    content: "";
+    display: block;
+    width: 10px;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 7px);
+    transform: translateY(-50%);
+    background: url(assets/icon-arrow-dark.svg) ;
+    transition: transform .5s ease-in-out;
+   
+}
+
+.__category_links_ul li:hover {
+    color: var(--Very-dark-grayish-blue);
+    font-size: 16px;
+}
+
+ .__links  li:not(.__category_links_ul li){
+     text-align: center;
+ }
+ .__links  li:not(.__category_links_ul li):focus>.__category_links>ul{
+   display: flex;
+   background-color: red;
+ }
+.__Login_Signup{
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    color: var(--Very-dark-desaturated-blue);
+    top: calc(145px + 173px);
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85vw;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+    padding-bottom: 20px;
+    box-shadow: 0px 10px 10px #bdbd;
+    padding-top: 145px;
+    gap: 24px;
+}
+#signup_btn{
+    background: linear-gradient(90deg, var(--Very-light-red), var(--Light-red));
+    color: white;
+    padding: 12px 36px;
+}
+#login_btn{
+    font-size: 20px;
+}
+.__transparent-gap{
+    display: none;
+}
+.__category_links{
+    
+    position: unset;
+    margin-top: 26px;
+    color: var(--Very-dark-grayish-blue);
+}
+.__category_links_ul{
+    padding: 0;
+    text-align: center;
+    gap: 20px
+}
+
 }
